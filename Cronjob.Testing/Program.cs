@@ -1,7 +1,10 @@
-﻿using Cronjob.Testing.BusinessLogic;using Cronjob.Testing.Storage;
+﻿using Cronjob.Testing.BusinessLogic;
+using Cronjob.Testing.Storage;
 
-await using var databaseReader = new DatabaseReader();
-await using var databaseWriter = new DatabaseWriter();
+const string connectionString = "Host=localhost:5432;Username=postgres;Password=admin;Database=postgres";
+
+await using var databaseReader = new DatabaseReader(connectionString);
+await using var databaseWriter = new DatabaseWriter(connectionString);
 var worker = new Worker(databaseReader, databaseWriter);
 await worker.DoAsync();
 

@@ -6,11 +6,10 @@ namespace Cronjob.Testing.Storage;
 public class DatabaseWriter : IDisposable, IAsyncDisposable
 {
     private readonly NpgsqlConnection _connection;
-    private const string ConnectionString = "Host=localhost:5432;Username=postgres;Password=admin;Database=postgres";
 
-    public DatabaseWriter()
+    public DatabaseWriter(string connectionString)
     {
-        _connection = new NpgsqlConnection(ConnectionString);
+        _connection = new NpgsqlConnection(connectionString);
         _connection.Open();
     }
 

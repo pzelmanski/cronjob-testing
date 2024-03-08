@@ -14,4 +14,4 @@ create table transformed_logs
     id uuid primary key,
     message text,
     severity int not null
-)
+);
