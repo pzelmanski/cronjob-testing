@@ -1,6 +1,6 @@
 using Testcontainers.PostgreSql;
 
-namespace Cronjob.Testing.Tests.e2e.Helpers;
+namespace Cronjob.Testing.Tests.Integration.Helpers;
 
 public class TestContainerFactory
 {

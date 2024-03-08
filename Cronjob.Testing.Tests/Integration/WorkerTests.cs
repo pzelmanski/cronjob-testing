@@ -1,8 +1,8 @@
 using Cronjob.Testing.Storage;
-using Cronjob.Testing.Tests.e2e.Helpers;
+using Cronjob.Testing.Tests.Integration.Helpers;
 using FluentAssertions;
 
-namespace Cronjob.Testing.Tests.e2e;
+namespace Cronjob.Testing.Tests.Integration;
 
 public class WorkerTests
 {

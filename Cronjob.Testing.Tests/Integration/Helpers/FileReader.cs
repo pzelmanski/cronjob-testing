@@ -1,4 +1,4 @@
-namespace Cronjob.Testing.Tests.e2e.Helpers;
+namespace Cronjob.Testing.Tests.Integration.Helpers;
 
 public static class FileReader
 {
