@@ -1,9 +1,8 @@
-﻿using Cronjob.Testing.Storage;
+﻿using Cronjob.Testing.BusinessLogic;using Cronjob.Testing.Storage;
 
-var data = await new Db().ReadRawData();
-foreach (var d in data)
-{
-    Console.WriteLine(d);
-}
+await using var databaseReader = new DatabaseReader();
+await using var databaseWriter = new DatabaseWriter();
+var worker = new Worker(databaseReader, databaseWriter);
+await worker.DoAsync();
 
 Console.WriteLine("Goodbye");
